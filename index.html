@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Vawel</title>
+</head>
+<body>
+    <section>
+        <div class="count">
+            <h1>Vawel</h1>
+            <input id="input" type="text" placeholder="Enter a word">
+            <button id="sub" class="button">Check</button>
+            <p id="text"></p>
+            <p id="text2"></p>
+        </div>
+
+    </section>
+
+    <script>
+        var a=document.getElementById("input");
+        var b=document.getElementById("sub");
+        var c=document.getElementById("text");
+        var n=document.getElementById("text2");
+        let l=0;
+        var d;
+        var m=0;
+        b.addEventListener('click',function(){
+         
+          var val=a.value;
+         for(var i=0;i<val.length;i++){
+            console.log(i);
+            if(val[i]=='a'||val[i]=='e'|| val[i]=='i'|| val[i]=='o'|| val[i]=='u'){
+            l++;
+        }
+        else{
+            m++;
+        }
+          
+         }
+         c.innerHTML="Vawel: "+l;
+         n.innerHTML="consonent: "+m;
+         a.value="";
+         l=0;
+         m=0;
+       })
+    </script>
+
+</body>
+    
+
+
+ 
